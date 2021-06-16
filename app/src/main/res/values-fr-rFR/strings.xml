@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Compteur Numérique</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Annuler</string>
+    <string name="title_sub">Entrez la valeur à soustraire</string>
+    <string name="title_add">Entrez la valeur à ajouter</string>
+    <string name="title_set">Entrez la valeur à définir</string>
+</resources>

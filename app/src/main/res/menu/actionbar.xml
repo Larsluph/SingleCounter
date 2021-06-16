@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/reset"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_popup_sync"
+        android:title="@string/reset"
+        android:visible="true"
+        app:showAsAction="always|withText" />
+</menu>
