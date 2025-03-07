@@ -9,5 +9,5 @@ I know how irritating it is when apps collect your data without your knowledge.
 
 I have not programmed this app to collect any personally identifiable information. All data (app preferences (like theme, etc.) and counter data) created is stored on your device only, and can be simply erased by clearing the app's data or uninstalling it.
 
-Yours sincerely,  
+Yours sincerely,
 Larsluph.

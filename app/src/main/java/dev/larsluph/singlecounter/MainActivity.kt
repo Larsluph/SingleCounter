@@ -1,4 +1,4 @@
-package com.larsluph.singlecounter
+package dev.larsluph.singlecounter
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -8,7 +8,9 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 
 class MainActivity : AppCompatActivity() {
     private var counter = 0
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
         val plus = findViewById<Button>(R.id.buttonCounterPlus)
@@ -70,9 +73,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun saveCounter() {
         val sp = getSharedPreferences("com.larsluph.simplecounter", MODE_PRIVATE)
-        val editor = sp.edit()
-        editor.putInt("CounterData", counter)
-        editor.apply()
+        sp.edit {
+            putInt("CounterData", counter)
+        }
         updateText()
     }
 
@@ -86,14 +89,14 @@ class MainActivity : AppCompatActivity() {
         val input = EditText(this)
         input.inputType = inputType
         AlertDialog.Builder(this)
-                .setTitle(title)
-                .setView(input)
-                .setPositiveButton(getString(R.string.ok)) { _, _ ->
-                    try {
-                        callback(input.text.toString().toInt())
-                    } catch (numberFormatException: NumberFormatException) {}
-                }
-                .setNegativeButton(getString(R.string.cancel)) { dialog, _ -> dialog.cancel() }
-                .show()
+            .setTitle(title)
+            .setView(input)
+            .setPositiveButton(getString(R.string.ok)) { _, _ ->
+                try {
+                    callback(input.text.toString().toInt())
+                } catch (numberFormatException: NumberFormatException) {}
+            }
+            .setNegativeButton(getString(R.string.cancel)) { dialog, _ -> dialog.cancel() }
+            .show()
     }
 }

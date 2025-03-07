@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#FF8400</color>
-    <color name="colorPrimaryDark">#8F3A00</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorPlus">#46DA4C</color>
     <color name="colorMinus">#E43030</color>
+
+    <color name="ic_launcher_background">#EF7F10</color>
 </resources>
