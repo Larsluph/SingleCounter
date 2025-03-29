@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PlusButtonStyle" parent="TextAppearance.AppCompat.Button">
+        <item name="backgroundTint">@color/colorPlus</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="MinusButtonStyle" parent="TextAppearance.AppCompat.Button">
+        <item name="backgroundTint">@color/colorMinus</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>

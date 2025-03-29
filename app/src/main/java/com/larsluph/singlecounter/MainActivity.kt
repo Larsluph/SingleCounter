@@ -1,4 +1,4 @@
-package dev.larsluph.singlecounter
+package com.larsluph.singlecounter
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
             .setPositiveButton(getString(R.string.ok)) { _, _ ->
                 try {
                     callback(input.text.toString().toInt())
-                } catch (numberFormatException: NumberFormatException) {}
+                } catch (_: NumberFormatException) {}
             }
             .setNegativeButton(getString(R.string.cancel)) { dialog, _ -> dialog.cancel() }
             .show()

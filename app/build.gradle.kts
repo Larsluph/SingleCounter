@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "dev.larsluph.singlecounter"
+    namespace = "com.larsluph.singlecounter"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "dev.larsluph.singlecounter"
+        applicationId = "com.larsluph.singlecounter"
         minSdk = 33
         targetSdk = 35
         versionCode = 4
