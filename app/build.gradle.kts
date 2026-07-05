@@ -1,18 +1,20 @@
+import com.android.build.api.dsl.ApplicationExtension
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
 }
 
-android {
+extensions.configure<ApplicationExtension> {
     namespace = "com.larsluph.singlecounter"
-    compileSdk = 35
+    compileSdk {
+        version = release(37)
+    }
 
     defaultConfig {
         applicationId = "com.larsluph.singlecounter"
         minSdk = 33
-        targetSdk = 35
+        targetSdk = 37
         versionCode = 5
         versionName = "1.3.1"
 
@@ -33,6 +35,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    buildToolsVersion = "36.1.0"
 }
 
 kotlin {
